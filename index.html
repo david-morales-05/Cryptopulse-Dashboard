@@ -6,15 +6,68 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>CryptoPulse Dashboard</title>
   </head>
-  <body>
-    <header>
-      <h1 class="text-blue-500 font-bold text-3xl">
-        CryptoPulse <span class="text-green-300">Dashboard</span>
+  <body class="bg-gray-200">
+    <header class="flex justify-evenly bg-red-800 pb-2">
+      <h1 class="text-gray-200 font-bold text-3xl mt-3">
+        CryptoPulse <span class="text-gray-400">Dashboard</span>
       </h1>
 
-      <nav>
-        <form></form>
-      </nav>
+      <div class="flex">
+        <form>
+          <label class="text-green-300 font-bold mr-3"
+            >Encuentra tu CriptoMoneda</label
+          >
+          <input
+            id="search"
+            class="bg-gray-200 mt-2 rounded-lg p-3"
+            type="text"
+            placeholder="Termino de Busqueda "
+          />
+        </form>
+
+        <a id="favorites" class="mt-2.5 ml-5" href="#">
+          <svg
+            fill="#f9f91a"
+            width="40px"
+            height="40px"
+            viewBox="0 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#f9f91a"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>Favorites</title>
+              <path
+                d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"
+              ></path>
+            </g>
+          </svg>
+        </a>
+      </div>
     </header>
+
+    <main id="principal-content">
+      <div class="m-20 py-20 bg-violet-950 rounded-2xl">
+        <table class="m-auto my-40f bg-white rounded-xl">
+          <thead>
+            <tr>
+              <th>Logo</th>
+              <th>Nombre</th>
+              <th>Precio (USD)</th>
+              <th>Variacion</th>
+            </tr>
+          </thead>
+          <tbody id="table-coins"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>
