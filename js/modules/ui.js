@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   arrayFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   showHTMLFavorites(arrayFavorites);
+  // deleteAllFavorites(arrayFavorites);
 });
 
 export function showCoins(list) {
